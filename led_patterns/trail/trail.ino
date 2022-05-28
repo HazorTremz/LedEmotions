@@ -13,8 +13,7 @@ unsigned long millisElapsed = 0;
 int sampleBufferValue = 0;
 
 
-int hue = 290;
-int huedelta = 3; 
+int hue = 290; 
 CRGB leds[num_led];
 
 
@@ -43,7 +42,6 @@ void loop() {
      sampleBufferValue++;
    }
   
-    int sensorValue = analogRead(A0);
 
      if (millisElapsed > SAMPLE_TIME) {
     
