@@ -60,7 +60,7 @@ class play_song:
 
 
     def main(self,para):
-        sheet = pd.read_excel("E:\led\music data.xlsx",usecols="{}".format("A"))
+        sheet = pd.read_excel("E:\led\music data.xlsx",usecols="{}".format("B"))
         rows = int(sheet.shape[0])
         song  = sheet.loc[random.randint(0,rows-1)][0]
         print("* NOW PLAYING :- *")
