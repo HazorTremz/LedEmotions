@@ -19,14 +19,16 @@ class Emotions:
     def check_emotion(self)->str:
         while self.time_factor < 5:
             time.sleep(1)
-            ret, frame = self.cap.read()
-            result = DeepFace.analyze(img_path=frame, actions=("emotion",))
-
-            our_emotion = self.face_recon(frame,result)
-
+            try:
+                ret, frame = self.cap.read()
+                result = DeepFace.analyze(img_path=frame, actions=("emotion",))
+                our_emotion = self.face_recon(frame,result)
+            except ValueError:
+                our_emotion = "neutral"
             if cv2.waitKey(2) and 0xFF == ord('q'):
                 break
             self.time_factor += 1
+        cv2.destroyAllWindows()
 
         return our_emotion
 
@@ -50,6 +52,3 @@ class Emotions:
         return main_emotion
 
 
-face = Emotions()
-expression = face.check_emotion()
-print(expression)
