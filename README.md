@@ -6,7 +6,13 @@
 
 ## Libraries Required : 
   <p> 
-    
+  1. pyserial<br>
+  2. deepface<br>
+  3. opencv-python<br>
+  4.vlc<br>
+  5.pafy<br>
+  6.re, urllib.parse, urllib.request<br>
+  7. tkinter<br>
   </p>
 
 
@@ -14,9 +20,10 @@
 
   <p>
    1. Install the the required imports <br>
-   2. Make the connections on arduino as given in code<br>
-   3. Upload the given code on ur arudino<br>
-   4. Run moodLighting.py<br>
+   2.Get your own auth key from <a href="https://sheety.co">Sheety</a> and make the required sheet for your emotion vs song
+   3. Make the connections on arduino as given in code<br>
+   4. Upload the given code on ur arudino<br>
+   5. Run moodLighting.py<br>
   </p>
   
 ```bash
